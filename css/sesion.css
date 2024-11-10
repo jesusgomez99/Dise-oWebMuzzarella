@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "MacondoRegular";
+    src: url("../fuentes/Macondo-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MacondoSwashCaps";
+    src: url("../fuentes/MacondoSwashCaps-Regular.ttf") format("truetype");
+    font-weight:normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    font-size: 16px;    
+}
+
+
+/*! AQUI EMPIEZA EL HEADER----------------------------------------------*/
+header{
+    background-color: rgb(44, 44, 44);
+    color: red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; /*centrar VERTICALMENTE*/
+    height: 10vh;
+    min-height: 47px;
+}
+
+header div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; /*centrar VERTICALMENTE*/
+}
+
+header img{
+    height: 40px;
+}
+
+header a{
+    text-decoration: none;
+    color: rgb(202, 202, 202);
+    margin: 7px 15px;
+    font-size: 16px;
+}
+
+header a:hover {
+    color: rgb(255, 255, 255);
+}
+
+#sesion{
+    width: 80px;
+    font-size: 14px;
+    display: flex;
+    text-align: center;
+    padding: 9px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(87, 87, 87);
+    color: rgb(202, 202, 202);
+}
+
+#sesion:hover{
+    background-color: rgb(107, 107, 107);
+}
+
+#carrito{
+    width: 30px;
+    height: auto;
+}
+
+
+@media (max-width: 783px) {
+
+    header{
+        height: auto;
+    }
+
+}
+
+
+
+/*! AQUÍ VA EL FOOTER-----------------------------------------------------------------*/
+footer{
+    background-color: rgb(48, 48, 48);
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(225, 225, 225);
+
+}
+
+footer h3{
+    font-size: 19px;
+}
+
+footer p{
+    font-size: 14x;
+}
+
+#footerlogo{
+    text-align: center;
+    font-family: "MacondoSwashCaps";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2vw;
+}
+
+#footerlogo a img{
+    padding-top: 20px;
+    width: 7vw;
+    
+}
+
+#footerlogo a{
+    margin: auto;
+    text-decoration: none;
+    color: rgb(225, 225, 225);
+}
+
+#footerlogo p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: calc(10px + 1.1vw);
+}
+
+footer hr{
+    width: 80vw;
+    margin-top: 20px;
+    border: solid 1px;
+    color: rgb(99, 99, 99);
+}
+
+#footerinfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(165, 165, 165);
+}
+
+#footerinfo div{
+    width: 190px;
+    text-align: center;
+
+}
+
+#footerinfo div h3{
+    font-family: "MacondoRegular";
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+#footerinfo div p{
+    margin: 3px;
+}
+
+#footerredes{
+    display: flex;
+    justify-content: center;
+}
+
+#footerredes a{
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#footerredes a img{
+    width: 3vw;
+    min-width: 25px;
+    border-radius: 50px;
+    border-color: white;
+    border: solid 1.5px white;
+}
+
+    @media (max-width: 590px) {
+
+        #footerinfo{
+            flex-direction: column;
+            margin: auto;
+        }
+
+    }
+
+
+/*! CONTENIDO DE LA PAGINA blog*/
+
+
+
+h1{
+    font-family: "MacondoSwashCaps";
+}
+
+
+
+input, textarea{
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#mensaje{
+    height: 100px;
+}
+
+#submit{
+    background-color: rgb(125, 125, 125);
+    color: white;
+    border: solid rgb(111, 111, 111) 2px;
+}
+
+#submit:hover{
+    background-color: rgb(142, 142, 142);
+}
+
+section{
+    background-color: black;
+    background-image: url(../multimedia/img_index/indexpizza.jpg);
+    background-size: cover;
+    background-position:center 50px;
+    background-repeat: no-repeat; /* Evita que la imagen se repita*/ 
+
+}

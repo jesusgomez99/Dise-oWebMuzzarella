@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muuuzzarella</title>
+
+    <link rel="shortcut icon" href="../../multimedia/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../../css/sesion.css">
+
+    
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.js"></script>
+
+    <!-- jQuery (necesario para Bootstrap 4) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Popper.js (necesario para los modales en Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+<body style="background-color: rgb(235, 235, 235);">
+
+    <header>
+        <a href="../../index.html"><img src="../../multimedia/logos/logowhite.png" alt="logo"></a>
+        <div>
+            <a href="../../index.html">Inicio</a>
+            <a href="../productos.html">Productos</a>
+            <a href="../servicios.html">Servicios</a>
+            <a href="../sobrenosotros.html">Sobre nosotros</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../contacto.html">Contacto</a>
+            <a href="./sesion.html"><div id="sesion" class="w-100">Iniciar Sesión</div></a>
+            <a href="./carrito.html"><img src="../../multimedia/carrito/carrito.png" alt="carrito" id="carrito"></a>
+        </div>
+    </header>
+
+    <main class="d-flex flex-column justify-content-center mx-auto w-50">
+
+
+        <section class="d-flex flex-column justify-content-center w-100 mx-auto mt-5 rounded-5 pb-5 pt-5 vh-75">
+
+            <h1 class="text-center fs-1 mt-0 mb-4" style="color: white;">¡Bienvenido!</h1>
+
+
+            <form action="" class="d-flex flex-column justify-content-center gap-4">
+                <input type="email" placeholder="Correo Electrónico" class="fs-6 w-75 mx-auto p-3 rounded-5">
+                <input type="password" placeholder="Contraseña" class="fs-6 w-75 mx-auto p-3 rounded-5">
+                    
+                <!-- Button modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Iniciar Sesión
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                            Inicio de sesión Correcto
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <div id="footerlogo">
+            <a href="../../index.html"><img src="../../multimedia/logos/logowhite.png" alt="logo"></a>
+            <a href="../../index.html"><p>Muuuzzarella</p></a>
+        </div>
+
+        <hr>
+
+        <div id="footerinfo">
+            <div>
+                <h3>Contacto:</h3>
+                <p>muuuzarella@gmail.com</p>
+                <p>957 65 23 23</p>
+            </div>
+            <div>
+                <h3>Ubicación:</h3>
+                <p>Av. Amapola de la Sierra, 88</p>
+                <p>14014 - Córdoba</p>            
+            </div>
+            <div>
+                <h3>Condiciones:</h3>
+                <p>Condiciones de venta</p>
+                <p>Condiciones de entrega</p>   
+            </div>
+        </div>
+
+        <div id="footerredes">
+            <a href="https://www.instagram.com/?hl=es"><img src="../../multimedia/rrss/instagram.png" alt="instagram"></a>
+            <a href="https://www.tiktok.com/es/"><img src="../../multimedia/rrss/x.png" alt="x"></a>
+            <a href="https://x.com/?lang=es"><img src="../../multimedia/rrss/tiktok.png" alt="tiktok"></a>
+        </div>
+    </footer>
+
+</body>
+</html>

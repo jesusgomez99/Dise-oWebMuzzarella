@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muuuzzarella</title>
+    <link rel="stylesheet" href="../../css/fichaproducto.css">
+    <link rel="shortcut icon" href="../../multimedia/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body style="background-color: rgb(235, 235, 235);">
+
+    <header>
+        <a href="../../index.html"><img src="../../multimedia/logos/logowhite.png" alt="logo"></a>
+        <div>
+            <a href="../../index.html">Inicio</a>
+            <a href="../productos.html">Productos</a>
+            <a href="../servicios.html">Servicios</a>
+            <a href="../sobrenosotros.html">Sobre nosotros</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../contacto.html">Contacto</a>
+            <a href="./sesion.html"><div id="sesion">Iniciar Sesión</div></a>
+            <a href="./carrito.html"><img src="../../multimedia/carrito/carrito.png" alt="carrito" id="carrito"></a>
+        </div>
+    </header>
+
+    <main>
+
+
+
+        <section id="product">
+
+            <h2>Mozzarella picada Cantadora Française 2,5kg</h2>
+
+            <article>
+                <img src="../../multimedia/productos/mozzarella_picada_cantadora.jpg" alt="producto">
+                <div>
+                    <p id="pu">Precio unitario:</p>
+                    <p id="precio"><b>31,00€</b></p>
+                    <label for="numeros">Cantidad:</label>
+                    <select id="numeros" name="numeros">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <button class="btn-carrito" onclick="anadirAlCarrito()">Añadir al carrito<img src="../../multimedia/carrito/carrito_negro.png"></button>
+                </div>
+            </article>    
+
+            <article>
+                <p id="descripcion">Esta mozzarella picada es un queso de alta calidad, ideal para profesionales del sector gastronómico que buscan un ingrediente versátil y auténtico. Esta mozzarella, elaborada siguiendo los más altos estándares europeos, destaca por su textura suave y elástica, perfecta para fundirse en una amplia variedad de preparaciones. Su formato picado facilita su uso en pizzas, lasañas, pastas y otros platos gratinados, garantizando una distribución uniforme del queso. Además, viene en un práctico envase de 2,5 kg, ideal para mantener su frescura y garantizar el rendimiento en cocinas de alta demanda. ¡Un ingrediente esencial para darle un toque auténtico y cremoso a tus recetas!</p>
+            </article>
+
+        </section>
+
+        <script>
+            function anadirAlCarrito() {
+                alert("¡El producto ha sido añadido al carrito!");
+            }
+        </script>
+
+    </main>
+
+
+    <footer>
+        <div id="footerlogo">
+            <a href="../../index.html"><img src="../../multimedia/logos/logowhite.png" alt="logo"></a>
+            <a href="../../index.html"><p>Muuuzzarella</p></a>
+        </div>
+
+        <hr>
+
+        <div id="footerinfo">
+            <div>
+                <h3>Contacto:</h3>
+                <p>muuuzarella@gmail.com</p>
+                <p>957 65 23 23</p>
+            </div>
+            <div>
+                <h3>Ubicación:</h3>
+                <p>Av. Amapola de la Sierra, 88</p>
+                <p>14014 - Córdoba</p>            
+            </div>
+            <div>
+                <h3>Condiciones:</h3>
+                <p>Condiciones de venta</p>
+                <p>Condiciones de entrega</p>   
+            </div>
+        </div>
+
+        <div id="footerredes">
+            <a href="https://www.instagram.com/?hl=es"><img src="../../multimedia/rrss/instagram.png" alt="instagram"></a>
+            <a href="https://www.tiktok.com/es/"><img src="../../multimedia/rrss/x.png" alt="x"></a>
+            <a href="https://x.com/?lang=es"><img src="../../multimedia/rrss/tiktok.png" alt="tiktok"></a>
+        </div>
+    </footer>
+
+</body>
+</html>

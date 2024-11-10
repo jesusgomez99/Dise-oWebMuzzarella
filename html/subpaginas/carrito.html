@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muuuzzarella</title>
+    <link rel="stylesheet" href="../../css/carrito.css">
+    <link rel="shortcut icon" href="../../multimedia/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.js"></script>
+
+    <!-- jQuery (necesario para Bootstrap 4) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Popper.js (necesario para los modales en Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <style>
+        .contenedor-contador {
+          display: flex;
+          align-items: center;
+        }
+    
+        .boton {
+          padding: 4px;
+          background-color: brown;
+          color: rgb(255, 255, 255);
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+        }
+    
+        .boton:hover {
+          background-color: rgb(192, 48, 48);
+        }
+    
+        .numero {
+          margin: 0 10px;
+          font-size: 15px;
+          font-weight: bold;
+          width: 20px;
+          text-align: center;
+        }
+      </style>
+
+</head>
+<body style="background-color: rgb(235, 235, 235);">
+
+    <header>
+        <a href="../../index.html"><img src="../../multimedia/logos/logowhite.png" alt="logo"></a>
+        <div>
+            <a href="../../index.html">Inicio</a>
+            <a href="../productos.html">Productos</a>
+            <a href="../servicios.html">Servicios</a>
+            <a href="../sobrenosotros.html">Sobre nosotros</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../contacto.html">Contacto</a>
+            <a href="./sesion.html"><div id="sesion" class="w-100">Iniciar Sesión</div></a>
+            <a href="./carrito.html"><img src="../../multimedia/carrito/carrito.png" alt="carrito" id="carrito"></a>
+        </div>
+    </header>
+
+    <main class="d-flex flex-colum justify-content-center mx-auto px-3 py-3 p-3 w-100">
+
+        <div class="d-flex flex-row gap-3  mt-3">
+            
+            <div id="lista" class="flex-1 p-3">
+                <div class="cabecera">
+                    <h2>Carrito</h2>
+                    <img src="../../multimedia/carrito/carrito_negro.png" alt="carrito" id="carrito">
+                </div>
+
+                <hr>
+
+                <div id="titulos">
+                    <h3 id="tit1">Imagen</h3>
+                    <h3 id="tit2">Descripción</h3>
+                    <h3 id="tit3">Precio</h3>
+                </div>
+
+                <hr>
+                <div class="d-flex flex-1 flex-row">
+                    <img  class="productoimg" src="../../multimedia/productos/mozzarella-bocconcini-granarolo.jpg" alt="">
+
+                    <div class="descripcion">
+                        <h3>Mozzarella bocconcini Calcium Granarolo 125g</h3>
+
+                        <div class="contenedor-contador">
+
+                            <p>Cantidad: </p>
+                            <!-- Botón de disminuir -->
+                            <button class="boton" onclick="disminuir()">−</button>
+                            
+                            <!-- Número que se va a modificar -->
+                            <div id="contador" class="numero">1</div>
+                            
+                            <!-- Botón de aumentar -->
+                            <button class="boton" onclick="aumentar()">+</button>
+                        </div>
+                    </div>
+                    <div class="precio">
+                        <h2>6,50€</h2>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="d-flex flex-1 flex-row">
+                    <img class="productoimg" src="../../multimedia/productos/mozzarella_maestrella.jpg" alt="">
+                    <div class="descripcion">
+                        <h3>Mozzarella rallada Maestrella 2,5kg</h3>
+
+                        <div class="contenedor-contador">
+
+                            <p>Cantidad: </p>
+                            <!-- Botón de disminuir -->
+                            <button class="boton" onclick="disminuir()">−</button>
+                            
+                            <!-- Número que se va a modificar -->
+                            <div id="contador" class="numero">1</div>
+                            
+                            <!-- Botón de aumentar -->
+                            <button class="boton" onclick="aumentar()">+</button>
+                        </div>
+                    </div>
+                    <div class="precio">
+                        <h2>28,00€</h2>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="d-flex flex-1 flex-row">
+                    <img class="productoimg" src="../../multimedia/productos/mozzarella-bocconcini-granarolo.jpg" alt="">
+                    <div class="descripcion">
+                        <h3>Queso Provolone All'Origano Ferrarini 180g</h3>
+
+                        <div class="contenedor-contador">
+
+                            <p>Cantidad: </p>
+                            <!-- Botón de disminuir -->
+                            <button class="boton" onclick="disminuir()">−</button>
+                            
+                            <!-- Número que se va a modificar -->
+                            <div id="contador" class="numero">1</div>
+                            
+                            <!-- Botón de aumentar -->
+                            <button class="boton" onclick="aumentar()">+</button>
+                        </div>
+                    </div>
+                    <div class="precio">
+                        <h2>5,00€</h2>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="d-flex flex-1 flex-row">
+                    <img  class="productoimg" src="../../multimedia/productos/mozzarella_picada_cantadora.jpg" alt="">
+                    <div class="descripcion">
+                        <h3>Mozzarella picada Cantadora Française 2,5kg</h3>
+
+                        <div class="contenedor-contador">
+
+                            <p>Cantidad: </p>
+                            <!-- Botón de disminuir -->
+                            <button class="boton" onclick="disminuir()">−</button>
+                            
+                            <!-- Número que se va a modificar -->
+                            <div id="contador" class="numero">1</div>
+                            
+                            <!-- Botón de aumentar -->
+                            <button class="boton" onclick="aumentar()">+</button>
+                        </div>
+                    </div>
+                    <div class="precio">
+                        <h2>31,00€</h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="final" class="w-auto h-auto p-3">
+                <h2>Subtotal</h2>
+                <h3>(4 productos)</h3>
+                <hr>
+                <h2>70,50€</h2>
+
+                <!-- Button modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Iniciar Sesión
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Iniciar Sesión</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body" style="color: black;">
+                        Has realizado la compra
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <div id="footerlogo">
+            <a href="../../index.html"><img src="../../multimedia/logos/logowhite.png" alt="logo"></a>
+            <a href="../../index.html"><p>Muuuzzarella</p></a>
+        </div>
+
+        <hr>
+
+        <div id="footerinfo">
+            <div>
+                <h3>Contacto:</h3>
+                <p>muuuzarella@gmail.com</p>
+                <p>957 65 23 23</p>
+            </div>
+            <div>
+                <h3>Ubicación:</h3>
+                <p>Av. Amapola de la Sierra, 88</p>
+                <p>14014 - Córdoba</p>            
+            </div>
+            <div>
+                <h3>Condiciones:</h3>
+                <p>Condiciones de venta</p>
+                <p>Condiciones de entrega</p>   
+            </div>
+        </div>
+
+        <div id="footerredes">
+            <a href="https://www.instagram.com/?hl=es"><img src="../../multimedia/rrss/instagram.png" alt="instagram"></a>
+            <a href="https://www.tiktok.com/es/"><img src="../../multimedia/rrss/x.png" alt="x"></a>
+            <a href="https://x.com/?lang=es"><img src="../../multimedia/rrss/tiktok.png" alt="tiktok"></a>
+        </div>
+    </footer>
+
+    <script>
+        let contador = 0;
+    
+        function aumentar() {
+          contador++;
+          document.getElementById('contador').innerText = contador;
+        }
+    
+        function disminuir() {
+          if (contador > 0) {  // Asegura que no baje de 0
+            contador--;
+            document.getElementById('contador').innerText = contador;
+          }
+        }
+    </script>
+
+</body>
+</html>
