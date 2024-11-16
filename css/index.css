@@ -296,6 +296,18 @@ h1{
     overflow: hidden;
 }
 
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    flex-direction: column;
+}
+
+video{
+    width: 80%;
+}
+
 
 
 @media (max-width: 770px) {

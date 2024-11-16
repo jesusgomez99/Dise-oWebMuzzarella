@@ -291,6 +291,7 @@ h1{
     margin-top: 40px;
     object-fit: cover;
     object-position: center;
+    
 }
 
 .imagen {
@@ -298,6 +299,22 @@ h1{
     overflow: hidden;
 }
 
+.video{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    flex-direction: column;
+}
+
+video{
+    width: 80%;
+}
+
+audio{
+    margin-top: 40px;
+}
 
 
 @media (max-width: 770px) {
@@ -340,6 +357,10 @@ h1{
         padding: 15px;
         border-radius: 50px;
         color: rgb(255, 255, 255);
+    }
+
+    video{
+        width: 100%;
     }
 }
 
