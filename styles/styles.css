@@ -35,6 +35,16 @@ header{
     align-items: center; /*centrar VERTICALMENTE*/
     height: 10vh;
     min-height: 47px;
+    animation: aparecer 3s ease-in-out forwards; /*animacion de fundido*/
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        opacity: 1; /* Completamente visible */
+    }
 }
 
 header div{
@@ -194,43 +204,48 @@ footer hr{
 
 
 /*! IMAGEN DE CABECERA*/
+
+.slider {
+    width: 80%;
+    height: 90vh;
+    margin: auto;
+    border-radius: 0px 0px 40px 40px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/*espacio de diapositivas*/
+.slides {
+    display: flex;
+    width: 300%; /* 3 images */
+    animation: slide 15s infinite;
+}
+
+.slide {
+    width: 34%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    object-fit: contain; /*muestra la imagen enterla dentro del container*/
+    display: block;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-34%); }
+    66% { transform: translateX(-68%); }
+    100% { transform: translateX(0); }
+}
+
 #contenedor{
     width: 100%; /* El contenedor ocupa el 100% del ancho de la ventana */
     height: 90vh;
     overflow: hidden; /* Hace que se adapte el contenido al contenedor y no se desborde*/
     position: relative; /* Posición relativa para superponer elementos */    
 }
-
-#contenedor img{
-    width: 100%; /* Altura fija para la imagen */
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    position: absolute; /* Posición absoluta para superponer */
-    top: 0;
-    left: 0;
-}
-
-.texto-fondo {
-    position: absolute; /* Posición absoluta dentro del contenedor */
-    top: 25%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%); /* Ajustar para centrar el texto */
-    z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
-    pointer-events: none; /* Para que el texto no interfiera con la interacción de la imagen */
-    
-    font-family: "MacondoSwashCaps";
-    font-size: 6vw; /* Tamaño de la fuente */
-    font-weight:lighter; /* Negrita para mayor impacto */
-    color: rgba(255, 255, 255, 0.803); /* Color blanco semitransparente */
-    text-shadow: 
-    1px 1px 10px rgba(0, 0, 0, 0.5),  /* Sombra inferior derecha */
-    -1px -1px 10px rgba(0, 0, 0, 0.5), /* Sombra superior izquierda */
-    1px -1px 10px rgba(0, 0, 0, 0.5),  /* Sombra superior derecha */
-    -1px 1px 10px rgba(0, 0, 0, 0.5),  /* Sombra inferior izquierda */
-    0px 0px 10px rgba(0, 0, 0, 0.5);   /* Sombra difusa en el centro */
-}
-
 
 /*AQUÍ VA EL CONTENIDO DEL INDEX*/
 h1{
@@ -294,6 +309,37 @@ h1{
     
 }
 
+
+.diap-texto {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Ocupa todo el ancho */
+    margin-top: 60px;
+    height: 100px;
+}
+
+/* Texto animado */
+.texto-animado {
+    position: absolute;
+    white-space: nowrap; /* Evita que el texto haga saltos de línea */
+    font-size: 80px;
+    font-family: "MacondoSwashCaps";
+    font-weight: bold;
+    color: rgb(125, 125, 125);
+    animation: move-text 60s linear infinite; /* Animación continua */
+}
+
+/* Animación */
+@keyframes move-text {
+    0% {
+        transform: translateX(-100%); /* Fuera de la pantalla por la izquierda */
+    }
+    100% {
+        transform: translateX(100%); /* Fuera de la pantalla por la derecha */
+    }
+}
+
+
 .imagen {
     text-align: right;
     overflow: hidden;
@@ -316,12 +362,25 @@ audio{
     margin-top: 40px;
 }
 
+@media (max-width: 1115px){
+
+    .slider {
+        height: 60vh;
+    }
+}
+
 
 @media (max-width: 770px) {
 
-    .texto-fondo {
-        font-size: 10vw; /* En pantallas pequeñas, la imagen ocupará el 80% del ancho del contenedor */
+    .slider {
+        height: 30vh;
+        width: 100%;
     }
+
+    .slide img {
+        width: 100%;
+    }
+    
 
     .textoimagen article{
         width: 100vw;
