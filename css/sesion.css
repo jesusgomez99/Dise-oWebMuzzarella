@@ -230,3 +230,19 @@ section{
     background-repeat: no-repeat; /* Evita que la imagen se repita*/ 
 
 }
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 159, 135, 0.25);
+}
+.botonaso {
+    background-color: brown;
+    border-color: brown;
+    color: white;
+}
+.botonaso:hover {
+    background-color: rgb(209, 54, 54);
+    border-color: rgb(209, 54, 54);
+}
+.nav-link.active {
+    border-bottom: 0px solid brown;
+}
