@@ -1,127 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muuuzzarella</title>
-
-    <link rel="stylesheet" href="./styles/styles.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/custom-styles.css">
     <link rel="shortcut icon" href="./multimedia/favicon/favicon.ico" type="image/x-icon">
-
 </head>
-<body style="background-color: rgb(235, 235, 235);">
-
+<body class="bg-light">
     <header>
-        <a href="./index.html"><img src="./multimedia/logos/logowhite.png" alt="logo"></a>
-        <div>
-            <a href="./index.html"><b>Inicio</b></a>
-            <a href="./html/productos.html">Productos</a>
-            <a href="./html/servicios.html">Servicios</a>
-            <a href="./html/sobrenosotros.html">Sobre nosotros</a>
-            <a href="./html/blog.html">Blog</a>
-            <a href="./html/contacto.html">Contacto</a>
-            <a href="./html/subpaginas/sesion.html"><div id="sesion">Iniciar Sesión</div></a>
-            <a href="./html/subpaginas/carrito.html"><img src="./multimedia/carrito/carrito.png" alt="carrito" id="carrito"></a>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./multimedia/logos/logowhite.png" alt="logo" height="40">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./html/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./html/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./html/sobrenosotros.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./html/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./html/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <a href="./html/subpaginas/sesion.html" class="btn btn-outline-light rounded-pill me-2">Iniciar Sesión</a>
+                        <a href="./html/subpaginas/carrito.html" class="text-light">
+                            <img src="./multimedia/carrito/carrito.png" alt="carrito" width="30" height="30">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
-
-    <div class="slider">
-        <div class="slides">
-            <div class="slide"><img src="./multimedia/img_index/slides/imagen1.jpg" alt="Image 1"></div>
-            <div class="slide"><img src="./multimedia/img_index/slides/imagen2.jpg" alt="Image 2"></div>
-            <div class="slide"><img src="./multimedia/img_index/slides/imagen3.jpg" alt="Image 3"></div>
+    <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./multimedia/img_index/slides/imagen1.jpg" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/img_index/slides/imagen2.jpg" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/img_index/slides/imagen3.jpg" class="d-block w-100" alt="Image 3">
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    
 
-    <main>
-        <section class="textoimagen">
-
-            <article class="texto">
-                <h1>Productos naturales</h1>
-                <p>Nuestra mozzarella destaca por su calidad y beneficios para la salud. Al ser elaborada con ingredientes frescos y sin aditivos artificiales, garantiza un sabor auténtico que realza cualquier platillo. Este tipo de queso no solo es delicioso, sino que también es una excelente fuente de proteínas y calcio, esenciales para el desarrollo y mantenimiento de huesos fuertes. Además, al optar por productos naturales, tus clientes están eligiendo alimentos que no han sido sometidos a procesos químicos, lo que les permite disfrutar de un producto más puro y saludable. La mozzarella también se asocia con una dieta equilibrada, ya que puede ser parte de una alimentación variada y nutritiva. Al promover la mozzarella natural, no solo ofreces un producto de alta calidad, sino que también contribuyes a un estilo de vida más saludable y consciente.</p>
-                <a href="./html/productos.html"><div>Ver productos</div></a>
+    <main class="container">
+        <section class="row mb-5">
+            <article class="col-md-6">
+                <h1 class="display-4 text-brown mb-4">Productos naturales</h1>
+                <p class="text-justify">
+                    Nuestra mozzarella destaca por su calidad y beneficios para la salud. Al ser elaborada con ingredientes frescos y sin aditivos artificiales, garantiza un sabor auténtico que realza cualquier platillo. Este tipo de queso no solo es delicioso, sino que también es una excelente fuente de proteínas y calcio, esenciales para el desarrollo y mantenimiento de huesos fuertes. Además, al optar por productos naturales, tus clientes están eligiendo alimentos que no han sido sometidos a procesos químicos, lo que les permite disfrutar de un producto más puro y saludable. La mozzarella también se asocia con una dieta equilibrada, ya que puede ser parte de una alimentación variada y nutritiva. Al promover la mozzarella natural, no solo ofreces un producto de alta calidad, sino que también contribuyes a un estilo de vida más saludable y consciente.
+                </p>
+                <a href="./html/productos.html" class="btn btn-brown rounded-pill px-4 py-2 bg-dark text-white">Ver productos</a>
             </article>
-
-            <article class="imagen">
-                <img src="./multimedia/img_index/vacas.jpg" alt="vacas">
+            <article class="col-md-6">
+                <img src="./multimedia/img_index/vacas.jpg" alt="vacas" class="img-fluid rounded">
             </article>
-
-
         </section>
 
-        <section class="diap-texto">
-                <div class="texto-animado">Muzzarélate Muzzarélate Muzzarélate Muzzarélate Muzzarélate Muzzarélate Muzzarélate Muzzarélate Muzzarélate Muzzarélate Muzzarélate Muzzarélate </div>
-        </section>
 
-        <section class="video">
 
-            <h1>Vídeo promocional</h1>
-
-            <video controls>
-                <source src="./multimedia/videos/video_promo.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-
-            <audio controls autoplay loop>
+        <section class="mb-5">
+            <h2 class="display-4 text-brown text-center mb-4">Vídeo promocional</h2>
+            <div class="ratio ratio-16x9 mb-3">
+                <video controls>
+                    <source src="./multimedia/videos/video_promo.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+            <audio controls class="w-100">
                 <source src="./multimedia/audios/audio_promo.mp3" type="audio/mp3">
                 Tu navegador no soporta el elemento de audio.
             </audio>
-
         </section>
-
     </main>
 
-
-    <footer>
-        <div id="footerlogo">
-            <a href="./index.html"><img src="./multimedia/logos/logowhite.png" alt="logo"></a>
-            <a href="./index.html"><p>Muuuzzarella</p></a>
-        </div>
-
-        <hr>
-
-        <div id="footerinfo">
-            <div>
-                <h3>Contacto:</h3>
-                <p>muuuzarella@gmail.com</p>
-                <p>957 65 23 23</p>
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <a href="./index.html" class="text-decoration-none text-light">
+                        <img src="./multimedia/logos/logowhite.png" alt="logo" class="mb-2" style="width: 100px;">
+                        <h3 class="h4">Muuuzzarella</h3>
+                    </a>
+                </div>
             </div>
-            <div>
-                <h3>Ubicación:</h3>
-                <p>Av. Amapola de la Sierra, 88</p>
-                <p>14014 - Córdoba</p>            
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h4 class="h5">Contacto:</h4>
+                    <p>muuuzarella@gmail.com</p>
+                    <p>957 65 23 23</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h4 class="h5">Ubicación:</h4>
+                    <p>Av. Amapola de la Sierra, 88</p>
+                    <p>14014 - Córdoba</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="h5">Condiciones:</h4>
+                    <p>Condiciones de venta</p>
+                    <p>Condiciones de entrega</p>
+                </div>
             </div>
-            <div>
-                <h3>Condiciones:</h3>
-                <p>Condiciones de venta</p>
-                <p>Condiciones de entrega</p>   
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <a href="https://www.instagram.com/?hl=es" class="me-3 text-decoration-none">
+                        <img src="./multimedia/rrss/instagram.png" alt="instagram" width="30">
+                    </a>
+                    <a href="https://www.tiktok.com/es/" class="me-3 text-decoration-none">
+                        <img src="./multimedia/rrss/x.png" alt="x" width="30">
+                    </a>
+                    <a href="https://x.com/?lang=es">
+                        <img src="./multimedia/rrss/tiktok.png" alt="tiktok" width="30">
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p>
+                        <a href="https://fanciful-basbousa-f4b557.netlify.app/" class="text-light">Muzzarella</a> by 
+                        <a href="https://github.com/jesusgomez99/DisenoWebMuzzarella" class="text-light">Jesús Gómez</a> está licenciado bajo 
+                        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" class="text-light">CC BY-NC-ND 4.0</a>
+                    </p>
+                </div>
             </div>
         </div>
-
-        <div id="footerredes">
-            <a href="https://www.instagram.com/?hl=es"><img src="./multimedia/rrss/instagram.png" alt="instagram"></a>
-            <a href="https://www.tiktok.com/es/"><img src="./multimedia/rrss/x.png" alt="x"></a>
-            <a href="https://x.com/?lang=es"><img src="./multimedia/rrss/tiktok.png" alt="tiktok"></a>
-        </div>
-
-        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-            <a property="dct:title" rel="cc:attributionURL" href="https://fanciful-basbousa-f4b557.netlify.app/" style="text-decoration: none; color: brown;">Muzzarella</a> 
-            by 
-            <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/jesusgomez99/DisenoWebMuzzarella" style="text-decoration: none; color: brown;">Jesús Gómez</a> 
-            está licenciado bajo 
-            <a href=" https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block; text-decoration: none; color: brown;" >
-                CC BY-NC-ND 4.0
-                <img style="height:22px!important; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
-                <img style="height:22px!important; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
-                <img style="height:22px!important; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
-                <img style="height:22px!important; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
-            </a>
-        </p>
-
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
