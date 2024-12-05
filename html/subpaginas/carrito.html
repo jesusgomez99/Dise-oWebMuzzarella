@@ -48,6 +48,10 @@
           width: 20px;
           text-align: center;
         }
+
+        .product-image {
+            width: 60px;
+        }
       </style>
 
 </head>
@@ -69,160 +73,77 @@
 
     <main class="d-flex flex-colum justify-content-center mx-auto px-3 py-3 p-3 w-100">
 
-        <div class="d-flex flex-row gap-3  mt-3">
-            
-            <div id="lista" class="flex-1 p-3">
-                <div class="cabecera">
-                    <h2>Carrito</h2>
-                    <img src="../../multimedia/carrito/carrito_negro.png" alt="carrito" id="carrito">
+        <div class="container mt-5">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h1>Carrito de Compras</h1>
                 </div>
-
-                <hr>
-
-                <div id="titulos">
-                    <h3 id="tit1">Imagen</h3>
-                    <h3 id="tit2">Descripción</h3>
-                    <h3 id="tit3">Precio</h3>
+                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                    <h3 class="me-3 mb-0">Total: <span id="total">0</span>€</h3>
+                    <button class="btn btn-primary btn-lg" onclick="pagar()">Pagar</button>
                 </div>
-
-                <hr>
-                <div class="d-flex flex-1 flex-row">
-                    <img  class="productoimg" src="../../multimedia/productos/mozzarella-bocconcini-granarolo.jpg" alt="">
-
-                    <div class="descripcion">
-                        <h3>Mozzarella bocconcini Calcium Granarolo 125g</h3>
-
-                        <div class="contenedor-contador">
-
-                            <p>Cantidad: </p>
-                            <!-- Botón de disminuir -->
-                            <button class="boton" onclick="disminuir()">−</button>
-                            
-                            <!-- Número que se va a modificar -->
-                            <div id="contador" class="numero">1</div>
-                            
-                            <!-- Botón de aumentar -->
-                            <button class="boton" onclick="aumentar()">+</button>
-                        </div>
-                    </div>
-                    <div class="precio">
-                        <h2>6,50€</h2>
-                    </div>
-
-                </div>
-
-                <hr>
-
-                <div class="d-flex flex-1 flex-row">
-                    <img class="productoimg" src="../../multimedia/productos/mozzarella_maestrella.jpg" alt="">
-                    <div class="descripcion">
-                        <h3>Mozzarella rallada Maestrella 2,5kg</h3>
-
-                        <div class="contenedor-contador">
-
-                            <p>Cantidad: </p>
-                            <!-- Botón de disminuir -->
-                            <button class="boton" onclick="disminuir()">−</button>
-                            
-                            <!-- Número que se va a modificar -->
-                            <div id="contador" class="numero">1</div>
-                            
-                            <!-- Botón de aumentar -->
-                            <button class="boton" onclick="aumentar()">+</button>
-                        </div>
-                    </div>
-                    <div class="precio">
-                        <h2>28,00€</h2>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="d-flex flex-1 flex-row">
-                    <img class="productoimg" src="../../multimedia/productos/mozzarella-bocconcini-granarolo.jpg" alt="">
-                    <div class="descripcion">
-                        <h3>Queso Provolone All'Origano Ferrarini 180g</h3>
-
-                        <div class="contenedor-contador">
-
-                            <p>Cantidad: </p>
-                            <!-- Botón de disminuir -->
-                            <button class="boton" onclick="disminuir()">−</button>
-                            
-                            <!-- Número que se va a modificar -->
-                            <div id="contador" class="numero">1</div>
-                            
-                            <!-- Botón de aumentar -->
-                            <button class="boton" onclick="aumentar()">+</button>
-                        </div>
-                    </div>
-                    <div class="precio">
-                        <h2>5,00€</h2>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="d-flex flex-1 flex-row">
-                    <img  class="productoimg" src="../../multimedia/productos/mozzarella_picada_cantadora.jpg" alt="">
-                    <div class="descripcion">
-                        <h3>Mozzarella picada Cantadora Française 2,5kg</h3>
-
-                        <div class="contenedor-contador">
-
-                            <p>Cantidad: </p>
-                            <!-- Botón de disminuir -->
-                            <button class="boton" onclick="disminuir()">−</button>
-                            
-                            <!-- Número que se va a modificar -->
-                            <div id="contador" class="numero">1</div>
-                            
-                            <!-- Botón de aumentar -->
-                            <button class="boton" onclick="aumentar()">+</button>
-                        </div>
-                    </div>
-                    <div class="precio">
-                        <h2>31,00€</h2>
-                    </div>
-                </div>
-
             </div>
-
-            <div id="final" class="w-auto h-auto p-3">
-                <h2>Subtotal</h2>
-                <h3>(4 productos)</h3>
-                <hr>
-                <h2>70,50€</h2>
-
-                <!-- Button modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Iniciar Sesión
-                </button>
-                
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Iniciar Sesión</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body" style="color: black;">
-                        Has realizado la compra
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items">
+                        <!-- Los items del carrito se insertarán aquí -->
+                    </tbody>
+                </table>
             </div>
-
         </div>
-
+    
+        <!-- Bootstrap JS y Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Datos de ejemplo para el carrito
+            const carrito = [
+                { nombre: "Queso Provolone All'Origano Ferrarini 180g", cantidad: 2, precio: 5, imagen: "../../multimedia/productos/provolone-ferrarini.jpg" },
+                { nombre: "Mozzarella picada Cantadora Française 2,5kg", cantidad: 5, precio: 31, imagen: "../../multimedia/productos/mozzarella_picada_cantadora.jpg" },
+                { nombre: "Mozzarella di Bufala Campana Bufalgaldi 1,5kg", cantidad: 3, precio: 22.5, imagen: "../../multimedia/productos/mozzarella_buffala-campana.jpg" }
+            ];
+    
+            // Función para actualizar el carrito
+            function actualizarCarrito() {
+                const tbody = document.getElementById('items');
+                const totalSpan = document.getElementById('total');
+                let total = 0;
+    
+                tbody.innerHTML = '';
+                carrito.forEach(item => {
+                    const subtotal = item.cantidad * item.precio;
+                    total += subtotal;
+                    tbody.innerHTML += `
+                        <tr>
+                            <td><img src="${item.imagen}" alt="${item.nombre}" class="product-image"></td>
+                            <td>${item.nombre}</td>
+                            <td>${item.cantidad}</td>
+                            <td>${item.precio.toFixed(2)}€</td>
+                            <td>${subtotal.toFixed(2)}€</td>
+                        </tr>
+                    `;
+                });
+    
+                totalSpan.textContent = total.toFixed(2);
+            }
+    
+            // Función para simular el pago
+            function pagar() {
+                alert('¡Gracias por tu compra!');
+                // Aquí iría la lógica para procesar el pago
+            }
+    
+            // Inicializar el carrito
+            actualizarCarrito();
+        </script>
 
     </main>
 

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muuuzzarella</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./multimedia/favicon/favicon.ico" type="image/x-icon">
+
+    <style>
+        .imagen-zoom {
+            transition: transform 0.6s ease, filter 0.3s ease; /* Combina transform y filter */
+            filter: brightness(80%)
+        }
+        .imagen-zoom:hover {
+            transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+            filter: brightness(100%); /* Oscurece la imagen al 70% */
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../multimedia/logos/logowhite.png" alt="logo" height="40">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/sobrenosotros.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <a href="../html/subpaginas/sesion.html" class="btn btn-outline-light rounded-pill me-2">Iniciar Sesión</a>
+                        <a href="../html/subpaginas/carrito.html" class="text-light">
+                            <img src="../multimedia/carrito/carrito.png" alt="carrito" width="30" height="30">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-center mb-4">Curso: Muuuzzarella Gourmet</h2>
+            
+            <div class="card mb-4">
+              <div>
+                <img src="../multimedia/img_index/curso2.jpg" alt="imagen curso" class="w-100 rounded">
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title">Detalles del Curso</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><strong>Fecha:</strong> 15 de julio de 2025</li>
+                  <li class="list-group-item"><strong>Hora:</strong> 18:00 - 20:00</li>
+                  <li class="list-group-item"><strong>Duración:</strong> 2 horas</li>
+                  <li class="list-group-item"><strong>Teléfono de contacto:</strong> 123-456-789</li>
+                  <li class="list-group-item"><strong>Dirección:</strong> Calle de la Pizza, 123, 28001 Madrid</li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Itinerario</h5>
+                <ol class="list-group list-group-numbered">
+                  <li class="list-group-item">Introducción a los ingredientes</li>
+                  <li class="list-group-item">Preparación de la masa</li>
+                  <li class="list-group-item">Técnicas de amasado</li>
+                  <li class="list-group-item">Selección y preparación de toppings</li>
+                  <li class="list-group-item">Horneado perfecto</li>
+                  <li class="list-group-item">Degustación y evaluación</li>
+                </ol>
+              </div>
+            </div>
+      
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Formulario de Inscripción</h5>
+                <form>
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono">
+                  </div>
+                  <div class="mb-3">
+                    <label for="experiencia" class="form-label">Experiencia previa en cocina</label>
+                    <select class="form-select" id="experiencia" required>
+                      <option value="">Selecciona una opción</option>
+                      <option value="principiante">Principiante</option>
+                      <option value="intermedio">Intermedio</option>
+                      <option value="avanzado">Avanzado</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="comentarios" class="form-label">Comentarios o preguntas</label>
+                    <textarea class="form-control" id="comentarios" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="terminos" required>
+                    <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Inscribirse</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <a href="../index.html" class="text-decoration-none text-light">
+                        <img src="../multimedia/logos/logowhite.png" alt="logo" class="mb-2" style="width: 50px;">
+                        <h3 class="h4">Muuuzzarella</h3>
+                    </a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h4 class="h5">Contacto:</h4>
+                    <p>muuuzarella@gmail.com</p>
+                    <p>957 65 23 23</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h4 class="h5">Ubicación:</h4>
+                    <p>Av. Amapola de la Sierra, 88</p>
+                    <p>14014 - Córdoba</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="h5">Condiciones:</h4>
+                    <p>Condiciones de venta</p>
+                    <p>Condiciones de entrega</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <a href="https://www.instagram.com/?hl=es" class="me-3 text-decoration-none">
+                        <img src="../multimedia/rrss/instagram.png" alt="instagram" width="30">
+                    </a>
+                    <a href="https://www.tiktok.com/es/" class="me-3 text-decoration-none">
+                        <img src="../multimedia/rrss/x.png" alt="x" width="30">
+                    </a>
+                    <a href="https://x.com/?lang=es">
+                        <img src="../multimedia/rrss/tiktok.png" alt="tiktok" width="30">
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p>
+                        <a href="https://fanciful-basbousa-f4b557.netlify.app/" class="text-light">Muzzarella</a> by 
+                        <a href="https://github.com/jesusgomez99/DisenoWebMuzzarella" class="text-light">Jesús Gómez</a> está licenciado bajo 
+                        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" class="text-light">CC BY-NC-ND 4.0</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
