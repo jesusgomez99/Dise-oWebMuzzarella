@@ -80,7 +80,24 @@
                 </div>
                 <div class="col-md-6 d-flex justify-content-end align-items-center">
                     <h3 class="me-3 mb-0">Total: <span id="total">0</span>€</h3>
-                    <button class="btn btn-primary btn-lg" onclick="pagar()">Pagar</button>
+                    <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#agradecimientoModal">Pagar</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="agradecimientoModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">Confirmación</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Compra realizada con éxito</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
             <div class="table-responsive">
@@ -133,12 +150,6 @@
                 });
     
                 totalSpan.textContent = total.toFixed(2);
-            }
-    
-            // Función para simular el pago
-            function pagar() {
-                alert('¡Gracias por tu compra!');
-                // Aquí iría la lógica para procesar el pago
             }
     
             // Inicializar el carrito
